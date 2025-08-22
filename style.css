@@ -394,6 +394,9 @@ nav {
 #contact {
   min-height: 85vh;
 }
+#resume {
+  min-height: 85vh;
+}
 /* 页脚 */
 .footer {
   text-align: center;
