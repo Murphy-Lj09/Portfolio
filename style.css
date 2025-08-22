@@ -1,14 +1,97 @@
 body {
   font-family: "Helvetica Neue", sans-serif;
-  background-color: #f9f9fb;
+  background: #f0f2fc;
   color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* 汉堡按钮 */
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  color: #444;
+}
+
+/* 侧边栏 */
+nav {
+  position: fixed;
+  left: -220px;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  background: linear-gradient(135deg, #a678ff, #e07bff);
+  padding-top: 60px;
+  transition: 0.3s;
+  z-index: 1000;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+#content {
   padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  transition: margin-left 0.3s ease;
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 15px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+nav ul li:hover {
+  background: #6843d2;
+}
+
+/* 内容区 */
+#content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.page {
+  display: block;
+  animation: fadeIn 0.4s ease;
+  max-width: 900px;      /* 限制宽度，避免太宽 */
+  margin: 0 auto;         /* 居中显示 */
+  padding: 2rem 2rem;     /* 左右留白 */
+  box-sizing: border-box; /* 确保 padding 不撑开 */
+}
+#home.page {
+  max-width: 100%;
   margin: 0;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 2rem;
+.hidden {
+  display: none;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 button {
@@ -25,17 +108,356 @@ button:hover {
   background-color: #6843d2;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 800px;
-  margin: auto;
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* 遮罩层 */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none; /* 默认隐藏 */
+  z-index: 900; /* 在侧栏下面, 内容上面 */
 }
 
-.card {
-  background-color: white;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+/* 调整层级关系 */
+nav {
+  z-index: 1000; /* 菜单在最上 */
 }
+
+.menu-btn {
+  z-index: 1100; /* 汉堡按钮在最上，避免被遮挡 */
+}
+/* About 页面样式 */
+.about-bio {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.skill-badge {
+  background: #f1e4ff; /* 浅粉紫 */
+  color: #6a3fbf;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.skill-badge:hover {
+  background: #e6d4ff;
+  transform: translateY(-2px);
+}
+
+/* Section 标题统一 */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 2rem 0 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Education（竖线 + 点，和 Timeline 保持统一） */
+.education {
+  border-left: 3px solid #a678ff;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.education-item {
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.education-item::before {
+  content: "";
+  position: absolute;
+  left: -18px;   /* 和 timeline 点的间距统一 */
+  top: 14px;
+  width: 12px;
+  height: 12px;
+  background: #a678ff;
+  border-radius: 50%;
+}
+
+/* Timeline */
+.timeline {
+  border-left: 3px solid #a678ff;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.timeline-item {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -18px;   /* 和 Education 保持一致 */
+  top: 14px;
+  width: 12px;
+  height: 12px;
+  background: #a678ff;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.timeline-content p {
+  margin: 6px 0;   /* 每段之间增加6px的上下间距 */
+  line-height: 1.6; /* 调整行间距更舒服 */
+}
+
+.timeline-content a {
+  display: inline-block;
+  margin-top: 8px;  /* 链接和正文之间增加空隙 */
+}
+
+
+/* Hero */
+#home {
+  background: linear-gradient(180deg, #f3e8ff, #f0f2fc);
+  width: 100%; 
+  box-sizing: border-box;
+}
+.hero {
+  background: transparent; 
+  text-align: center; 
+  padding: 5rem 2rem; 
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.hero h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+}
+.hero-buttons {
+  margin-top: 2rem;
+}
+.hero-buttons button {
+  margin: 0 0.5rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #7e5bef;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.hero-buttons button:hover {
+  background-color: #6843d2;
+  box-shadow: 0 0 10px rgba(126,91,239,0.6);
+}
+
+/* Quick links */ 
+.quick-links { 
+  display: flex; 
+  gap: 2rem; 
+  justify-content: center; 
+  flex-wrap: nowrap; 
+  margin: 1.5rem auto;
+  max-width: 700px;
+   }
+
+.link-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  flex: 1;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.link-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Projects */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* 项目截图 */
+.project-image {
+  width: 140px;   /* 图片宽度 */
+  height: auto;
+  border-radius: 8px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 右边文字部分 */
+.project-text {
+  flex: 1; /* 占满剩余空间 */
+}
+
+.project-text h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.project-text p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ✅ 移动端：仍然保持横向排列，只是图片缩小 */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: row;
+  }
+  .project-image {
+    width: 100px;
+    margin-right: 1rem;
+  }
+}
+
+#projectsHint {
+  margin-top: -0.5rem;
+  font-size: 0.9rem;
+  text-align: left;
+  color: #777;
+  font-style: italic;
+  padding-left: 2px;
+}
+
+#contact {
+  min-height: 85vh;
+}
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9fb;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.8rem;
+}
+
+.social-icons a {
+  color: #555;
+  text-decoration: none;
+  position: relative; /* 用于 tooltip */
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #7e5bef; /* 悬停时高亮 */
+}
+
+/* Tooltip 样式 */
+.tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px 10px;
+  position: absolute;
+  bottom: 125%; /* 显示在图标上方 */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  transition: opacity 0.3s;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+/* Tooltip 小三角 */
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* 在提示框底部 */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* 悬停显示 */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* 页隐藏用 */
+.page.hidden { display: none; }
