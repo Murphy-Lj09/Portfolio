@@ -104,7 +104,7 @@ document.getElementById("publicationList").innerHTML = `
 `;
 
     document.getElementById("projectsTitle").innerText = "项目展示 🎯";
-    document.getElementById("projectsHint").innerText = "💡 点击项目图片即可使用或下载";
+    document.getElementById("projectsHint").innerText = "💡 点击项目图片即可使用或预览";
     document.getElementById("projectList").innerHTML = `
     <div class="project-card">
      <a href="https://murphy-lj09.github.io/timezone-converter/" target="_blank">
@@ -126,7 +126,7 @@ document.getElementById("publicationList").innerHTML = `
     </div>
   </div>
   <div class="project-card">
-   <a href="https://raw.githubusercontent.com/Murphy-Lj09/Portfolio/main/哥大中美教育论坛手册.pdf" target="_blank">
+   <a href="https://drive.google.com/file/d/1VOwryhrKX9DHQchn-YHsSaiBw4Sf0aGR/view?usp=sharing" target="_blank">
     <img src="https://github.com/Murphy-Lj09/Portfolio/blob/main/forum.png?raw=true" alt="哥大中美教育论坛截图" class="project-image">
     <div class="project-text">
     </a>
@@ -137,7 +137,6 @@ document.getElementById("publicationList").innerHTML = `
 `;
 
     document.getElementById("resumeTitle").innerText = "简历";
-    document.getElementById("resumeLink").innerText = "📄 下载我的简历（PDF）";
 
     document.getElementById("contactTitle").innerText = "联系方式";
     document.getElementById("emailLabel").innerText = "邮箱：";
@@ -213,7 +212,7 @@ document.getElementById("publicationList").innerHTML = `
 
 
     document.getElementById("projectsTitle").innerText = "Projects 🎯";
-    document.getElementById("projectsHint").innerText = "💡 Click on a project image to use or download";
+    document.getElementById("projectsHint").innerText = "💡 Click on a project image to use or preview";
     document.getElementById("projectList").innerHTML = `
     <div class="project-card">
     <a href="https://murphy-lj09.github.io/timezone-converter/" target="_blank">
@@ -234,7 +233,7 @@ document.getElementById("publicationList").innerHTML = `
     </div>
     </div>
     <div class="project-card">
-    <a href="https://raw.githubusercontent.com/Murphy-Lj09/Portfolio/main/哥大中美教育论坛手册.pdf" target="_blank">
+    <a href="https://drive.google.com/file/d/1VOwryhrKX9DHQchn-YHsSaiBw4Sf0aGR/view?usp=sharing" target="_blank">
     <img src="https://github.com/Murphy-Lj09/Portfolio/blob/main/forum.png?raw=true" alt="Columbia China–U.S. Education Forum Screenshot" class="project-image">
     </a>
     <div class="project-text">
@@ -244,7 +243,6 @@ document.getElementById("publicationList").innerHTML = `
   </div>`;
 
     document.getElementById("resumeTitle").innerText = "Resume";
-    document.getElementById("resumeLink").innerText = "📄 Download Resume (PDF)";
 
     document.getElementById("contactTitle").innerText = "Contact";
     document.getElementById("emailLabel").innerText = "Email:";
