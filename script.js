@@ -74,7 +74,7 @@ function switchLang() {
   document.getElementById("educationList").innerHTML = `
     <div class="education-item">
       <strong>哥伦比亚大学</strong><br/>
-      国际教育发展硕士 (2024 – 2026, 预计)
+      国际教育发展硕士 (2024 – 2026)
     </div>
     <div class="education-item">
       <strong>普渡大学</strong><br/>
@@ -86,7 +86,7 @@ function switchLang() {
     document.getElementById("timelineTitle").innerText = "经历时间线";
     document.getElementById("timeline").innerHTML = `
       <div class="timeline-item"><div class="timeline-date">2025.05 – 2025.08</div><div class="timeline-content"><strong>内容策略实习生 @ 清柚教育</strong><br/>参与留学咨询矩阵号运营，策划并发布公众号与小红书内容，涵盖选校建议与学员案例。结合平台调性运用Canva设计本地化模板，响应热点与政策变动。累计20+内容获得500+收藏，显著提升平台曝光率。</div></div>
-      <div class="timeline-item"><div class="timeline-date">2024.12 – 至今</div><div class="timeline-content"><strong>社媒运营实习生 @ 易思汇</strong><br/>独立运营哥大校园相关小红书账号，聚焦政策解读与校园热点。学期内每周发布视觉内容并优化标题与标签，提升留存率。单条地铁卡更新贴2小时破万浏览，账号总浏览达45,000+。</div></div>
+      <div class="timeline-item"><div class="timeline-date">2024.12 – 2025.05</div><div class="timeline-content"><strong>社媒运营实习生 @ 易思汇</strong><br/>独立运营哥大校园相关小红书账号，聚焦政策解读与校园热点。学期内每周发布视觉内容并优化标题与标签，提升留存率。单条地铁卡更新贴2小时破万浏览，账号总浏览达45,000+。</div></div>
       <div class="timeline-item"><div class="timeline-date">2025.03 – 2025.04</div><div class="timeline-content"><strong>论坛策划 @ 哥大中美教育论坛</strong><br/>参与哥大中美教育论坛内容与视觉落地，通过Canva完成协同排版。同时担任“AI与教育”分论坛负责人，负责嘉宾统筹与会议流程。最终项目成果覆盖6,000+受众，获嘉宾与组织方一致好评。</div></div>
       <div class="timeline-item"><div class="timeline-date">2022.08 – 2023.05</div><div class="timeline-content"><strong>本科研究助理 @ 普渡大学</strong><br/>参与四校联合的NSF研究项目，聚焦小学数学课程使用情况。采用混合方法分析教师访谈与课堂数据，并在普渡大学2022年秋季本科生研究大会上赢得学术型海报二等奖。</div></div>
     `;
@@ -180,7 +180,7 @@ document.getElementById("publicationList").innerHTML = `
   document.getElementById("educationList").innerHTML = `
     <div class="education-item">
       <strong>Columbia University</strong><br/>
-      M.A. in International Educational Development (2024 – 2026, Expected)
+      M.A. in International Educational Development (2024 – 2026)
     </div>
     <div class="education-item">
       <strong>Purdue University</strong><br/>
@@ -192,7 +192,7 @@ document.getElementById("publicationList").innerHTML = `
     document.getElementById("timelineTitle").innerText = "Experience Timeline";
     document.getElementById("timeline").innerHTML = `
       <div class="timeline-item"><div class="timeline-date">May 2025 – Aug 2025</div><div class="timeline-content"><strong>Marketing Content Strategy Intern @ CheersYou</strong><br/>Planned and published WeChat and Red posts on school selection and student success application stories. Designed attractive visual templates using Canva, aligning with trending topics and policy updates.Achieved 500+ saves across 20+ posts, significantly increasing platform visibility.</div></div>
-      <div class="timeline-item"><div class="timeline-date">Dec 2024 – Present</div><div class="timeline-content"><strong>Social Media Growth Intern @ EasyTransfer</strong><br/>Designed and managed Red content targeting Columbia’s Chinese student community, integrating visual storytelling and localized policy insights to build high-retention audience funnels for future conversion. Published weekly visual content with SEO-optimized captions and high-retention formats during semesters.One MetroCard update post reached 10K+ views in 2 hours; total engagement exceeded 45K.</div></div>
+      <div class="timeline-item"><div class="timeline-date">Dec 2024 – May 2025</div><div class="timeline-content"><strong>Social Media Growth Intern @ EasyTransfer</strong><br/>Designed and managed Red content targeting Columbia’s Chinese student community, integrating visual storytelling and localized policy insights to build high-retention audience funnels for future conversion. Published weekly visual content with SEO-optimized captions and high-retention formats during semesters.One MetroCard update post reached 10K+ views in 2 hours; total engagement exceeded 45K.</div></div>
       <div class="timeline-item"><div class="timeline-date">Mar 2025 – Apr 2025</div><div class="timeline-content"><strong>Content Strategist @ Columbia China–U.S. Education Forum</strong><br/>Designed bilingual 20-page handbook and coordinated cross-platform editing via Canva. Co-led the “AI in Education” subforum, managing guest list, flow, and technical logistics. Final deliverables reached 6,000+ attendees, with positive feedback from all guest speakers.</div></div>
       <div class="timeline-item"><div class="timeline-date">Aug 2022 – May 2023</div><div class="timeline-content"><strong>Research Assistant, Purdue URT Program</strong><br/>Joined NSF-funded project across four universities on elementary math curriculum use. Applied qualitative and quantitative methods to analyze interview and classroom data. Won second prize for academic posters at Purdue University's 2022 Fall Undergraduate Research Conference.</div></div>
     `;
